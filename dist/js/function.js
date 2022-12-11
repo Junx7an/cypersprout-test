@@ -1,0 +1,1 @@
+const menu_toggle=document.querySelector(".menu-toggle"),sidebar=document.querySelector(".sidebar"),app_height=document.querySelector(".app");menu_toggle.addEventListener("click",()=>{menu_toggle.classList.toggle("is-active"),sidebar.classList.toggle("is-active"),app_height.classList=toggle("is-active")});

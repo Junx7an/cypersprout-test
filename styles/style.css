@@ -1,0 +1,147 @@
+.row {
+  border: 1px solid #ededed;
+  padding: 10px;
+}
+
+.left {
+  float: left;
+  width: 30%;
+}
+
+.right {
+  float: right;
+  width: 30%;
+}
+
+.menu-dekstop {
+  display: block;
+  float: left;
+}
+
+.menu-mobile {
+  text-align: left;
+}
+
+.grey-block {
+  background: #ededed;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.grey-block:nth-child(odd) {
+  background-color: #dfdfdf;
+}
+
+.logo,
+.social {
+  margin-top: 1rem;
+  background-color: #dfdfdf;
+  padding-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-dekstop {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    position: relative;
+    top: 0.7rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 80px;
+    background-color: red;
+    cursor: pointer;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    transition: 0.2s ease;
+  }
+  .sidebar.is-active {
+    left: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+.hamburger {
+  position: relative;
+  top: calc(50% - 2px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+}
+
+.hamburger:focus {
+  background-color: aqua;
+}
+
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 90px;
+  background-color: white;
+  transition-duration: 0.25s;
+}
+
+.hamburger > span::before {
+  content: "";
+  top: -8px;
+}
+
+.hamburger > span::after {
+  content: "";
+  top: 8px;
+}
+
+.app {
+  display: flex;
+  height: 60px;
+}
+
+.app.is-active {
+  height: 100vh;
+}
+
+.sidebar {
+  flex: 1 1 0;
+  max-width: 240px;
+  background-color: #8d8d8d;
+  text-align: left;
+  padding: 46px 0 20px 30px;
+  z-index: 100;
+}
+
+.sidebar .menu .menu-item {
+  display: block;
+  padding: 1em;
+  color: #ededed;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-left: -14px;
+}
+
+.menu-toggle.is-active .hamburger > span {
+  transform: rotate(45deg);
+}
+
+.menu-toggle.is-active .hamburger > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+.menu-toggle.is-active .hamburger > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}/*# sourceMappingURL=style.css.map */
